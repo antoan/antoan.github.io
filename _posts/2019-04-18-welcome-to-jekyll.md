@@ -13,13 +13,7 @@ gallery:
     alt: placeholder image 1
     title: Image 1 title caption
 ---
----
-gallery:
-  - url: /assets/images/rosgraph.png
-    image_path: /assets/images/rosgraph.png
-    alt: placeholder image 1
-    title: Image 1 title caption
----
+
 
 Nemesis is a hybrid ROS1/ROS2 skid-steer UVG which grew out of an effort to primarily familiaze my self with integrating an exising ground vehicle into the ROS ecosystem.
 
