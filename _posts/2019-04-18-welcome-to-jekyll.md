@@ -7,6 +7,11 @@ tags:
   - Jekyll
   - update
 published: true
+gallery:
+  - url: /assets/images/rosgraph.png
+    image_path: /assets/images/rosgraph.png
+    alt: placeholder image 1
+    title: Image 1 title caption
 ---
 
 Nemesis is a hybrid ROS1/ROS2 skid-steer UVG which grew out of an effort to primarily familiaze my self with integrating an exising ground vehicle into the ROS ecosystem.
@@ -38,13 +43,10 @@ The software stack running on the mobile base is largely based on an adaptation 
 The ROS hardware interface implementation wraps the motor controller driver that came with the mobile base, which I ported to Cython from Python to reduce latency in the main ROS control loop.  
 For perception and SLAM, I use [rtabmap_ros][rtabmap-ros-wiki] built from source with Apriltag, g2o features support. In addition, I use the Realsense [realsense_ros][[realsense-ros-github] distribution rather than the `ros-melodic-realsense-ros` package.
 
-gallery:
-  - url: /assets/images/unsplash-gallery-image-1.jpg
-    image_path: /assets/images/unsplash-gallery-image-1-th.jpg
-    alt: "placeholder image 1"
-    title: "Image 1 title caption"
 
-![Nemesis Ros Graph]({{site.baseurl}}/assets/images/rosgraph.png)
+
+{% include gallery caption="This is a sample gallery with **Markdown support**." %}
+
 
 
 
