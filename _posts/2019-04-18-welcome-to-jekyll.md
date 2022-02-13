@@ -21,11 +21,9 @@ The following describes my stable setup on ROS1.
 
 ## System Architecture
 
-[SYSTEM DIAGRAM IMAGE]
-
 The System architecture is logically into two system components with corresponding code repositories:
 
-1.  A mobile base with an internal ARM based (ARM Cortex-A53 1.2GHz) base controller computer running ROS Kinetic. 
+1.  A mobile base with an internal ARM based (ARM Cortex-A53 1.2GHz) base controller computer running ROS Kinetic.
 [antoan/nemesis][nemesis]
 
 2.  Upper chassis housing an i7 Intel dual core processor ( i7-6600U CPU @ 2.60GHz processor) computer running ROS Melodic and `D435i & T256 Intel Realsense` depth and tracking cameras, positioned relative to each other with a dedicated mount. 
@@ -37,9 +35,19 @@ Both computers are connected via ethernet network with an onboard router. The ro
 
 The software stack running on the mobile base is largely based on an adaptation of the [Clearpath Husky Kinetic][husky-kinetic-github-branch] stack's base, control, description and navigation packages. 
 
-The ROS hardware interface implementation wraps the motor controller driver that came with the mobile base, which I ported to Cython from Python to reduce latency in the main ROS control loop.  For perception and SLAM, I use [rtabmap_ros][rtabmap-ros-wiki] built from source with Apriltag, g2o features support. In addition, I use the Realsense [realsense_ros][[realsense-ros-github] distribution rather than the `ros-melodic-realsense-ros` package.
+The ROS hardware interface implementation wraps the motor controller driver that came with the mobile base, which I ported to Cython from Python to reduce latency in the main ROS control loop.  
+For perception and SLAM, I use [rtabmap_ros][rtabmap-ros-wiki] built from source with Apriltag, g2o features support. In addition, I use the Realsense [realsense_ros][[realsense-ros-github] distribution rather than the `ros-melodic-realsense-ros` package.
 
-[ROS GRAPH IMAGE]
+gallery:
+  - url: /assets/images/unsplash-gallery-image-1.jpg
+    image_path: /assets/images/unsplash-gallery-image-1-th.jpg
+    alt: "placeholder image 1"
+    title: "Image 1 title caption"
+
+![Nemesis Ros Graph]({{site.baseurl}}/assets/images/rosgraph.png)
+
+
+
 
 Below is an example of an outdoor mapping session.
 
